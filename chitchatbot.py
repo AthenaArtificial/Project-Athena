@@ -1,3 +1,10 @@
+########################
+######  AthenaAI  ######
+######    2021    ######
+########################
+##### Chitchat Bot #####
+########################
+
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 import numpy as np
@@ -11,12 +18,12 @@ import pickle
 # load stemmer
 stemmer = LancasterStemmer()
 # open the json training file
-with open("intents.json", "r") as file:
+with open("intents/intents.json", "r") as file:
     data = json.load(file)
 
 """Preprocessing"""
 try:
-    with open("data.pickle", "rb") as f:
+    with open("ml_model/data.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except FileNotFoundError:
     # stemming words (just cleaning up words to find the roots)
@@ -59,7 +66,7 @@ except FileNotFoundError:
     output = np.array(output)
 
     '''Save point'''
-    with open("data.pickle", "wb") as f:
+    with open("ml_model/data.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 
@@ -81,13 +88,13 @@ except:
 
 
 def bag_of_words(inp, word_bank):
-    bag = [0] * len(words)
+    bag = [0] * len(word_bank)
 
     inp_words = nltk.word_tokenize(inp)
     inp_words = [stemmer.stem(w.lower()) for w in inp_words]
 
     for x in inp_words:
-        for i, w in enumerate(words):
+        for i, w in enumerate(word_bank):
             if w == x:
                 bag[i] = 1
 
