@@ -1,0 +1,17 @@
+Sync with the project on GitHub
+
+Before working on anything:
+
+1. Do a pull from main branch, to make sure you are working with the newest code:
+In Terminal (Command Line):
+cd your_project_path
+git checkout main
+git pull
+git checkout your_branch
+
+2. After coding:
+git add .
+git commit -m “a message about what did you do”
+git push
+
+3. Go to GitHub website, go to your branch, do a pull request from your branch to main branch, so that it will merge your branch to main branch.
