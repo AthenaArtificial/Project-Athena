@@ -6,7 +6,7 @@
 ########################
 
 
-input_path = "../Authors/Plato/Raw/SOPHIST.txt"
+input_path = "../Authors/Plato/Raw/CRITIAS.txt"
 output_path = "../Authors/Plato/Processed/"
 
 # name : length
@@ -16,8 +16,18 @@ names = {"Theodorus. ": 11,
          "Stranger. ": 10,
          "Theod. ": 7,
          "Soc. ": 5,
+         "Y. Soc. ": 8,
          "Theaet. ": 8,
-         "Str. ": 5
+         "Str. ": 5,
+         "Protarchus. ": 12,
+         "Pro. ": 5,
+         "Philebus. ": 10,
+         "Phi. ": 5,
+         "Critias. ": 9,
+         "Crit. ": 6,
+         "Timaeus. ": 9,
+         "Tim. ": 5,
+         "Hermocrates. ": 13
          }
 
 """Read and process raw"""
