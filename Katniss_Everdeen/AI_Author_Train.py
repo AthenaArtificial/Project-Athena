@@ -20,8 +20,8 @@ if not os.path.isdir(os.path.join("models", model_name)):
     print(f"Downloading {model_name} model...")
     gpt2.download_gpt2(model_name=model_name)   # model is saved into current directory under /models/124M/
 
-author_path = "Authors/Harry_Potter/Processed"
-file_name = "harrypotter.txt"  # Name of the book you want to train.
+author_path = "Authors/Katniss_Everdeen/Processed"
+file_name = "katnisseverdeen.txt"  # Name of the book you want to train.
 file = author_path + file_name
 
 sess = gpt2.start_tf_sess()
