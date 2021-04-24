@@ -53,7 +53,7 @@ class ChatBot:
         result_index = np.argmax(results)
         tag = self.labels[result_index]
 
-        if results[result_index] > 0.8:
+        if results[result_index] > 0.9:
             for t in self.data["intents"]:
                 if t["tag"] == tag:
                     response = random.choice(t["responses"])
