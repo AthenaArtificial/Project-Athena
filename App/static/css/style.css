@@ -1,17 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
 body {
     background-image: url('../assets/home_background.jpg');
-    height: 720px;
-    width: 1280px;
+    width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;"
 }
 
 .title {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Limelight", Helvetica, Arial, sans-serif;
     color: white;
-    margin: 3rem;
-    font-size: 5rem;
+    margin: 2rem;
+    font-size: 3rem;
 }
 
 .character-selection .character .character-link .character-hover {
@@ -37,8 +38,12 @@ body {
 }
 
 .character h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Limelight", Helvetica, Arial, sans-serif;
   color: white;
-  margin: 2rem;
-  font-size: 2rem;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#buttons a {
+    font-family: "Limelight", Helvetica, Arial, sans-serif;
 }
