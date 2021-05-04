@@ -22,7 +22,8 @@ with sr.Microphone() as source:
         tts_engine.say(chatbot_response)
         tts_engine.runAndWait()
     else:
-        tf.reset_default_graph()
+        tf.compat.v1.reset_default_graph()
+        # tf.reset_default_graph()
         sess = gpt2.start_tf_sess()
         gpt2.load_gpt2(sess, checkpoint_dir="Plato/checkpoint")
         answers = gpt2.generate(sess, length=100, include_prefix=False, temperature=0.1, top_k=1, top_p=0.9,
